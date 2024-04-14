@@ -31,13 +31,13 @@ const LeftSideBar = () => {
   return loading || !isLoaded ? (
     <Loader />
   ) : (
-    <div className="h-screen left-0 top-0 sticky overflow-auto px-10 py-6 flex flex-col gap-8 max-md:hidden 2xl:w-[350px] pr-20 custom-scrollbar">
+    <div className="h-screen left-0 top-0 sticky overflow-auto px-5 py-5 flex flex-col gap-12 max-md:hidden 2xl:w-[350px] pr-20 custom-scrollbar bg-dark-1 border border-zinc-800">
       <Link href="/">
-        <Image src="/assets/logo.png" alt="logo" width={200} height={200} />
+        <Image src="/assets/logo.png" alt="logo" width={250} height={250} />
       </Link>
 
       <div className="flex flex-col gap-10">
-        <div className="flex flex-col gap-2 items-center text-light-1">
+        <div className="flex flex-col gap-2 items-center text-light-1  text-body-bold">
           <Link href={`/profile/${userData?._id}/posts`}>
             <Image
               src={userData?.profilePhoto}
@@ -46,12 +46,15 @@ const LeftSideBar = () => {
               height={50}
               className="rounded-full"
             />
+            <p className="text-subtle-medium  text-light-3">
+              @{userData?.username}
+            </p>
           </Link>
           <p className="text-small-bold">
             {userData?.firstName} {userData?.lastName}
           </p>
         </div>
-        <div className="flex text-light-1 justify-between">
+        <div className="flex text-light-1 justify-between text-body-bold">
           <div className="flex flex-col items-center">
             <p className="text-base-bold">{userData?.posts?.length}</p>
             <p className="text-tiny-medium">Posts</p>
