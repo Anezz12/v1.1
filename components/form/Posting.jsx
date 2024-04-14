@@ -4,6 +4,7 @@ import { AddPhotoAlternateOutlined } from "@mui/icons-material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 const Posting = ({ post, apiEndpoint }) => {
   const {
@@ -16,6 +17,31 @@ const Posting = ({ post, apiEndpoint }) => {
   });
 
   const router = useRouter();
+
+  const LabelWithBorder = () => {
+    const [isFocused, setIsFocused] = useState(false);
+
+    const handleFocus = () => {
+      setIsFocused(true);
+    };
+
+    const handleBlur = () => {
+      setIsFocused(false);
+    };
+
+    return (
+      <label
+        htmlFor="caption"
+        className={`text-light-1 px-2 py-1 rounded-md transition-colors duration-300 ${
+          isFocused ? "bg-gray-700 border-purple-600 border" : "bg-gray-800"
+        }`}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+      >
+        Caption
+      </label>
+    );
+  };
 
   const handlePublish = async (data) => {
     try {
@@ -85,7 +111,7 @@ const Posting = ({ post, apiEndpoint }) => {
             if (
               typeof value === "null" ||
               (Array.isArray(value) && value.length === 0) ||
-              value === "underfined"
+              value === "undefined"
             ) {
               return "A photo is required!";
             }
@@ -101,24 +127,24 @@ const Posting = ({ post, apiEndpoint }) => {
       )}
 
       <div>
-        <label htmlFor="caption" className="text-light-1">
-          Caption
-        </label>
-        <textarea
-          {...register("caption", {
-            required: "Caption is required",
-            validate: (value) => {
-              if (value.length < 3) {
-                return "Caption must be more than 2 characters";
-              }
-            },
-          })}
-          type="text"
-          rows={3}
-          placeholder="What's on your mind?"
-          className="w-full input"
-          id="caption"
-        />
+        <LabelWithBorder />
+        <div className="border border-gray-700 rounded-md p-2">
+          <textarea
+            {...register("caption", {
+              required: "Caption is required",
+              validate: (value) => {
+                if (value.length < 3) {
+                  return "Caption must be more than 2 characters";
+                }
+              },
+            })}
+            type="text"
+            rows={3}
+            placeholder="What's on your mind?"
+            className="w-full input bg-transparent"
+            id="caption"
+          />
+        </div>
 
         {errors.caption && (
           <p className="text-red-500">{errors.caption.message}</p>
@@ -126,15 +152,17 @@ const Posting = ({ post, apiEndpoint }) => {
       </div>
 
       <div>
-        <label htmlFor="tag" className="text-light-1">
-          Tag
-        </label>
-        <input
-          {...register("tag", { required: "Tag is required" })}
-          type="text"
-          placeholder="#tag"
-          className="w-full input"
-        />
+        <LabelWithBorder />
+        <div className="border border-gray-700 rounded-md p-2">
+          <textarea
+            {...register("tag", {
+              required: "Tag is required",
+            })}
+            type="text"
+            placeholder="#tag"
+            className="w-full input"
+          />
+        </div>
 
         {errors.tag && <p className="text-red-500">{errors.tag.message}</p>}
       </div>
