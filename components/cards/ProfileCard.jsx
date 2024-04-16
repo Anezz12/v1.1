@@ -68,7 +68,7 @@ const ProfileCard = ({ userData, activeTab }) => {
               {userData.firstName} {userData.lastName}
             </p>
             <p className="text-light-3 text-subtle-semibold">
-              {userData.username}
+              @{userData.username}
             </p>
             <div className="flex gap-7 text-small-bold max-sm:gap-4">
               <div className="flex max-sm:flex-col gap-2 items-center max-sm:gap-0.5">
