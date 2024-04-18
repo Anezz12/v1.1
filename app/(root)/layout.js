@@ -1,6 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import "../globals.css";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 import LeftSideBar from "@components/layout/LeftSideBar";
 import MainContainer from "@components/layout/MainContainer";
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           <BottomBar />
         </body>
       </html>
+      <Analytics />
     </ClerkProvider>
   );
 }
