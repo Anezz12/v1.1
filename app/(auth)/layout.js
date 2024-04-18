@@ -25,16 +25,16 @@ export default function RootLayout({ children }) {
             src="/assets/vidio.mp4"
           />
           <div className="min-h-screen flex flex-col justify-center items-center relative z-10">
-            <main className="max-w-4xl mx-auto px-4 py-8 bg-white bg-opacity-80 rounded-lg shadow-lg p-8">
+            <main className="max-w-4xl mx-auto px-1 py-7 bg-white bg-opacity-0 rounded-lg shadow-lg p-4">
               {children}
             </main>
           </div>
-          <footer className="text-center text-white py-4 relative z-10">
+          <div className="text-center text-white py-1 relative z-10">
             <p>
               &copy; {new Date().getFullYear()} AmikomConnect. All rights
               reserved.
             </p>
-          </footer>
+          </div>
         </body>
       </html>
     </ClerkProvider>
