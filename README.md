@@ -18,7 +18,7 @@ Next.js, JavaScript, MongoDB, Clerk, TailwindCSS
 - Liked Posts
 - Follow & Following
 - Serach by Tag/Name
-- Responsive (Desktop Only)
+- Responsive 
 
 
 
