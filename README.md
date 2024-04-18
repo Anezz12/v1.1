@@ -3,6 +3,7 @@
 
 Social Media Yang digunakan untuk Project UTS dan UAS
 
+Demo : https://amikomconnect.vercel.app/
 
 ## ⚙️ Tech Stack
 
