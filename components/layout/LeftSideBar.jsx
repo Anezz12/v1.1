@@ -31,7 +31,7 @@ const LeftSideBar = () => {
   return loading || !isLoaded ? (
     <Loader />
   ) : (
-    <div className="h-screen left-0 top-0 sticky overflow-auto px-5 py-5 flex flex-col gap-12 max-md:hidden 2xl:w-[350px] pr-20 custom-scrollbar bg-dark-1 border border-zinc-800">
+    <div className="h-screen left-0 top-0 sticky overflow-auto px-8 py-8 flex flex-col gap-12 max-md:hidden 2xl:w-[350px] pr-20 custom-scrollbar bg-dark-1 border border-zinc-800">
       <Link href="/">
         <Image src="/assets/logo.png" alt="logo" width={250} height={250} />
       </Link>
