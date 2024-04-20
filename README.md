@@ -13,7 +13,7 @@ Next.js, JavaScript, MongoDB, Clerk, TailwindCSS
 
 - SignIn & SignUp
 - Create Account
-- Post Image
+- Post Image (localhost)
 - Edit Post
 - Saved Posts
 - Liked Posts
