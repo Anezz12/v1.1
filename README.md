@@ -13,12 +13,12 @@ Next.js, JavaScript, MongoDB, Clerk, TailwindCSS
 
 - SignIn & SignUp
 - Create Account
-- Post Image
+- Post Image (localhost)
 - Edit Post
 - Saved Posts
 - Liked Posts
 - Follow & Following
-- Serach by Tag/Name
+- Search by Tag/Name
 - Responsive 
 
 
