@@ -152,15 +152,18 @@ const Posting = ({ post, apiEndpoint }) => {
       </div>
 
       <div>
-        <LabelWithBorder />
-        <div className="border border-gray-700 rounded-md p-2">
-          <textarea
-            {...register("tag", {
-              required: "Tag is required",
-            })}
+        <label
+          htmlFor="tag"
+          className="text-light-1 px-2 py-1 rounded-md transition-colors duration-300 bg-gray-800"
+        >
+          Tag
+        </label>
+        <div className="border border-gray-700 rounded">
+          <input
+            {...register("tag", { required: "Tag is required" })}
             type="text"
             placeholder="#tag"
-            className="w-full input"
+            className="w-full input bg-white"
           />
         </div>
 

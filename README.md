@@ -1,4 +1,3 @@
-
 # AmikomConnect
 
 Social Media Yang digunakan untuk Project UTS dan UAS
@@ -7,7 +6,7 @@ Demo : https://amikomconnect.vercel.app/
 
 ## ⚙️ Tech Stack
 
-Next.js, JavaScript, MongoDB, Clerk, TailwindCSS
+Next.js, JavaScript, TailwindCSS, MongoDB, Clerk
 
 ## 🔋 Features
 
@@ -19,10 +18,7 @@ Next.js, JavaScript, MongoDB, Clerk, TailwindCSS
 - Liked Posts
 - Follow & Following
 - Search by Tag/Name
-- Responsive 
-
-
-
+- Responsive
 
 ## 🤸 Quick Start
 
@@ -39,11 +35,14 @@ git clone https://github.com/Anezz12/v1.0.git cd v1.0
 Installation
 
 Install the project dependencies using npm:
+
 ```bash
 npm run dev
 ```
+
 Set Up Environment Variables
 Create a new file named .env.local in the root of your project and add the following content:
+
 ```bash
 #Clerk
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
@@ -62,21 +61,17 @@ MONGODB_URL=
 Replace the placeholder values with your actual respective account credentials. You can obtain these credentials by signing up on the Clerk, MongoDB
 
 Running the Project
+
 ```bash
 npm run dev
 ```
 
 Open http://localhost:3000 in your browser to view the project.
+
 ## 🔗 Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harsena-argretya/)
 
-
-
-
-
-
 ## Authors
 
 - [Harsena](https://github.com/Anezz12/v1.0)
-
