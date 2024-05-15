@@ -76,3 +76,4 @@ Open http://localhost:3000 in your browser to view the project.
 
 - [Harsena](https://github.com/Anezz12)
 - [Adit Noval](https://github.com/Adityanovall)
+- [Reva Danindra](https://github.com/RevaDaanindra)
