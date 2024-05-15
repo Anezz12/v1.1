@@ -68,9 +68,6 @@ npm run dev
 
 Open http://localhost:3000 in your browser to view the project.
 
-## 🔗 Links
-
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harsena-argretya/)
 
 ## Authors
 
